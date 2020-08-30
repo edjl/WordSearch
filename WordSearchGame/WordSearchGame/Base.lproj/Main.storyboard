@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WordSearchGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PGE-Od-lL9">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word Search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1O5-8Z-FWQ">
+                                <rect key="frame" x="83.5" y="114.5" width="247" height="58.5"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="45"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Words Found: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2o-Gk-0gQ">
+                                <rect key="frame" x="180" y="188.5" width="154" height="22.5"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xbB-tQ-kdN">
+                                <rect key="frame" x="0.0" y="221" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xbB-tQ-kdN" secondAttribute="height" multiplier="1:1" id="hTA-Yl-enC"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="CUN-h4-az1">
+                                    <size key="itemSize" width="39" height="39"/>
+                                    <size key="estimatedItemSize" width="39" height="39"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LetterCell" id="qCX-pn-Qv6" customClass="LetterCollectionViewCell" customModule="WordSearchGame" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="39" height="39"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gIL-CD-16n">
+                                            <rect key="frame" x="0.0" y="0.0" width="39" height="39"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5va-UE-ViY">
+                                                    <rect key="frame" x="14.5" y="6.5" width="10" height="26"/>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
+                                                    <color key="textColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="5va-UE-ViY" firstAttribute="centerX" secondItem="gIL-CD-16n" secondAttribute="centerX" id="4wQ-6s-GPP"/>
+                                                <constraint firstItem="5va-UE-ViY" firstAttribute="centerY" secondItem="gIL-CD-16n" secondAttribute="centerY" id="wTc-7d-j8S"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="39" height="39"/>
+                                        <connections>
+                                            <outlet property="letterView" destination="5va-UE-ViY" id="IdI-WH-1u6"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="DwX-Pc-KfZ" userLabel="WordsToFind">
+                                <rect key="frame" x="80.5" y="635" width="253.5" height="177"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ssf-Uq-XVo" userLabel="LeftStack">
+                                        <rect key="frame" x="0.0" y="0.0" width="106.5" height="177"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SWIFT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmP-AK-luf">
+                                                <rect key="frame" x="0.0" y="0.0" width="106.5" height="59"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KOTLIN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODe-q9-ALe">
+                                                <rect key="frame" x="0.0" y="59" width="106.5" height="59"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OBJECTIVEC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j3c-cH-4ct">
+                                                <rect key="frame" x="0.0" y="118" width="106.5" height="59"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="BFY-gK-f4s" userLabel="RightStack">
+                                        <rect key="frame" x="166.5" y="0.0" width="87" height="177"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VARIABLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dmp-XA-ejC">
+                                                <rect key="frame" x="0.0" y="0.0" width="87" height="59"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JAVA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFP-Wa-mg7">
+                                                <rect key="frame" x="0.0" y="59" width="87" height="59"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MOBILE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2pA-5a-h6W">
+                                                <rect key="frame" x="0.0" y="118" width="87" height="59"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="1O5-8Z-FWQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="2PX-Rs-Y8s"/>
+                            <constraint firstAttribute="bottom" secondItem="xbB-tQ-kdN" secondAttribute="bottom" id="4kU-qC-noV"/>
+                            <constraint firstItem="h2o-Gk-0gQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="30" id="8Sy-b6-rrz">
+                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                            </constraint>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DwX-Pc-KfZ" secondAttribute="bottom" constant="70" id="Fta-uy-H35">
+                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                            </constraint>
+                            <constraint firstItem="DwX-Pc-KfZ" firstAttribute="top" secondItem="xbB-tQ-kdN" secondAttribute="bottom" id="H0k-BL-tJK"/>
+                            <constraint firstItem="xbB-tQ-kdN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ITj-sH-HJ1">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-20"/>
+                            </constraint>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xbB-tQ-kdN" secondAttribute="trailing" id="J5D-lM-wMF"/>
+                            <constraint firstAttribute="bottom" secondItem="PGE-Od-lL9" secondAttribute="bottom" id="Jki-xY-n1g"/>
+                            <constraint firstItem="PGE-Od-lL9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MwZ-bT-DZd"/>
+                            <constraint firstItem="1O5-8Z-FWQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RaU-VK-mD5">
+                                <variation key="heightClass=compact-widthClass=regular" constant="250"/>
+                            </constraint>
+                            <constraint firstItem="DwX-Pc-KfZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WJ8-aQ-GZc">
+                                <variation key="heightClass=compact-widthClass=regular" constant="250"/>
+                            </constraint>
+                            <constraint firstItem="xbB-tQ-kdN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Xwd-j8-Hsk"/>
+                            <constraint firstAttribute="trailing" secondItem="PGE-Od-lL9" secondAttribute="trailing" id="ZrJ-js-M5s"/>
+                            <constraint firstItem="DwX-Pc-KfZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1:0.75" id="coD-gq-HqM">
+                                <variation key="heightClass=regular-widthClass=compact" constant="150"/>
+                            </constraint>
+                            <constraint firstItem="xbB-tQ-kdN" firstAttribute="top" secondItem="1O5-8Z-FWQ" secondAttribute="bottom" constant="60" id="d7W-hW-Qpf"/>
+                            <constraint firstItem="xbB-tQ-kdN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="168.5" id="fgJ-50-BlF">
+                                <variation key="heightClass=compact-widthClass=regular" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="xbB-tQ-kdN" firstAttribute="top" secondItem="h2o-Gk-0gQ" secondAttribute="bottom" constant="10" id="lnn-0a-60Z"/>
+                            <constraint firstItem="PGE-Od-lL9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="nZb-db-bHM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DwX-Pc-KfZ" secondAttribute="bottom" constant="10" id="sPg-4i-XYw">
+                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                            </constraint>
+                            <constraint firstItem="1O5-8Z-FWQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1:1.7" id="wby-sk-vrA">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-120"/>
+                            </constraint>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="h2o-Gk-0gQ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="sPg-4i-XYw"/>
+                                <exclude reference="wby-sk-vrA"/>
+                                <exclude reference="4kU-qC-noV"/>
+                                <exclude reference="ITj-sH-HJ1"/>
+                                <exclude reference="fgJ-50-BlF"/>
+                                <exclude reference="lnn-0a-60Z"/>
+                                <exclude reference="8Sy-b6-rrz"/>
+                                <exclude reference="H0k-BL-tJK"/>
+                                <exclude reference="coD-gq-HqM"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="J5D-lM-wMF"/>
+                                <include reference="4kU-qC-noV"/>
+                                <exclude reference="d7W-hW-Qpf"/>
+                                <include reference="fgJ-50-BlF"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="h2o-Gk-0gQ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Fta-uy-H35"/>
+                                <include reference="sPg-4i-XYw"/>
+                                <exclude reference="2PX-Rs-Y8s"/>
+                                <include reference="wby-sk-vrA"/>
+                                <exclude reference="4kU-qC-noV"/>
+                                <include reference="ITj-sH-HJ1"/>
+                                <exclude reference="d7W-hW-Qpf"/>
+                                <include reference="lnn-0a-60Z"/>
+                                <include reference="8Sy-b6-rrz"/>
+                                <include reference="H0k-BL-tJK"/>
+                                <exclude reference="coD-gq-HqM"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="xbB-tQ-kdN" id="20t-F9-HJ2"/>
+                        <outlet property="javaWord" destination="LFP-Wa-mg7" id="5Hb-8N-Zax"/>
+                        <outlet property="kotlinWord" destination="ODe-q9-ALe" id="0Sa-Ip-JzX"/>
+                        <outlet property="mobileWord" destination="2pA-5a-h6W" id="e3c-rb-sg9"/>
+                        <outlet property="objectivecWord" destination="j3c-cH-4ct" id="4RU-58-XAx"/>
+                        <outlet property="swiftWord" destination="wmP-AK-luf" id="s3o-gy-Anq"/>
+                        <outlet property="variableWord" destination="Dmp-XA-ejC" id="bRS-ap-cLS"/>
+                        <outlet property="wordsFound" destination="h2o-Gk-0gQ" id="hXU-Al-4gm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="115.84821428571428"/>
+        </scene>
+    </scenes>
+</document>
